@@ -1,0 +1,59 @@
+body, html, #root, div {
+  margin: 0;
+  padding: 0;
+  /* font-family: sans-serif; */
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  background-image: url('https://cdn.eso.org/images/publicationjpg/eso1701a.jpg')
+}
+
+div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas{
+  border: 1px solid grey;
+}
+
+
+.potion {
+  border: 1px solid grey;
+  cursor:  url('http://www.movax13h.com/spritesterpixelartgenerator/spritestericon300x300.png')2 2, auto;
+}
+
+.sword {
+  border: 1px solid grey;
+  cursor:  url('http://novask.in/4755302427656192.png')2 2, auto;
+}
+
+.giant {
+  border: 1px solid grey;
+  cursor:  url('http://pngimg.com/uploads/cursor/cursor_PNG76.png')2 2, auto;
+}
+
+.cat {
+  border: 1px solid grey;
+  cursor:  url('https://raw.githubusercontent.com/meteormanaged/neko-atsume-slack-emojis/master/kitties/bobthecat.png')2 2, auto;
+}
+
+.hidden{
+  display: none;
+}
+
+#gifLogo {
+  text-align: center;
+}
+
+#main-menu{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+ul{
+  list-style-type: none; 
+}
+
