@@ -10,7 +10,7 @@ export default class SignUpPage extends Component {
   handleSubmit = (e) => {
     
     e.preventDefault()
-    fetch('http://localhost:3000/signup', {
+    fetch('https://fast-sea-48558.herokuapp.com/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

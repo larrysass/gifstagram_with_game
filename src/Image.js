@@ -16,7 +16,7 @@ export default class Image extends React.Component{
     }
 
     componentDidMount(){
-        fetch(`http://localhost:3000/gifs/${this.props.gif.id}`).then(r => r.json()).then(data => 
+        fetch(`https://fast-sea-48558.herokuapp.com/gifs/${this.props.gif.id}`).then(r => r.json()).then(data => 
         this.setState({
             likes: data.likes,
             comments: data.comments

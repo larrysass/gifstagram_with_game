@@ -11,6 +11,7 @@ class HomePage extends Component {
           width='900'
           height='600' alt=""/>
         <ul id="main-menu">
+        <p> If you don't want to sign up, just use "test" as username and password at login!</p>
         <Link to="/login" ><button className="btn error">Go to Login</button></Link>
         <Link to="/signup" ><button className="btn primary">Go to Signup</button></Link>
         </ul>

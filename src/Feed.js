@@ -27,7 +27,7 @@ export default class Feed extends React.Component {
             this.setState({
                 currentUser: this.props.currentUser
             })}
-        fetch('http://localhost:3000/gifs')
+        fetch('https://fast-sea-48558.herokuapp.com/gifs')
         .then(r => r.json())
         .then(gifs => {const filteredGifs = gifs.filter(gif => gif.likes.length > 0).reverse()
             this.setState({

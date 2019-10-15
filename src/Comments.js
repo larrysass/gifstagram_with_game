@@ -25,7 +25,7 @@ export default class Comments extends React.Component{
         e.preventDefault()
         
         const newComment = this.state.newComment
-        fetch(`http://localhost:3000/comments`,{
+        fetch(`https://fast-sea-48558.herokuapp.com/comments`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ export default class Comments extends React.Component{
         deletedComment.remove()
          
         console.log(deletedComment)
-        fetch(`http://localhost:3000/comments/${e.target.value}`,{
+        fetch(`https://fast-sea-48558.herokuapp.com/comments/${e.target.value}`,{
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

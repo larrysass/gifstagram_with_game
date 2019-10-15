@@ -9,14 +9,14 @@ class ProfilePage extends Component {
     gifs: []
   }
   componentDidMount(){
-    fetch('http://localhost:3000/profile',{
+    fetch('https://fast-sea-48558.herokuapp.com/profile',{
     headers: {
       'Authorization': `Bearer ${localStorage.token}`
     }
     })
     .then(res => res.json())
     .then(user => 
-    fetch(`http://localhost:3000/users/${user.id}`).then(r => r.json()).then(data => this.setState({
+    fetch(`https://fast-sea-48558.herokuapp.com/users/${user.id}`).then(r => r.json()).then(data => this.setState({
       currentUser: data,
       gifs: data.likes
     }))
