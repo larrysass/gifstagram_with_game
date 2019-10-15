@@ -60,6 +60,7 @@ export default class Feed extends React.Component {
             <button onClick={this.backToCanvas} className="btn error">Back to Canvas</button>
             <button onClick={this.mostLiked} className="btn primary">Most Popular</button>
             <button onClick={this.newestGifs} className="btn success">Newest</button>
+            <h1>Click on a GIF to like or leave a comment!</h1>
             {gifs}
           </div>
         );

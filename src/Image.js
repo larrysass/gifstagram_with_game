@@ -36,14 +36,14 @@ export default class Image extends React.Component{
             this.setState({
                 likes: newLikes
             })
-            fetch(`http://localhost:3000/likes/${userLike[0].id}`,{
+            fetch(`https://fast-sea-48558.herokuapp.com/${userLike[0].id}`,{
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 }
             }).then(r => r.json()).then()} else {
-            fetch(`http://localhost:3000/likes`,{
+            fetch(`https://fast-sea-48558.herokuapp.com/likes`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

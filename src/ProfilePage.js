@@ -53,6 +53,8 @@ class ProfilePage extends Component {
           <h2 >Your favorite gifs:</h2></div> :
           <h1>getting your info...</h1>
         }
+                    <h1>Click on a GIF to like or leave a comment!</h1>
+
         {gifs}
       </div>
     );
