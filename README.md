@@ -1,7 +1,7 @@
 # Gifstagram 
 
 This is the frontend repo for Gifstagram, a project by me and [Daniel Voigt](https://github.com/teenageGrampa/)
-Its a social media platform for discovering and sharing GIFs. 
+Its a social media platform for discovering and sharing GIFs, powerd by the GIPHY API. 
 
 [Click here for the deployed demo](http://gifstagram-new.surge.sh/)
 
