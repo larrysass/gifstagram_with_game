@@ -23,7 +23,7 @@ export default class Canvas extends React.Component{
     }
 
     componentDidMount(){
-        fetch('http://localhost:3000/profile',{
+        fetch('https://fast-sea-48558.herokuapp.com/profile',{
         headers: {
           'Authorization': `Bearer ${localStorage.token}`
         }
@@ -35,7 +35,7 @@ export default class Canvas extends React.Component{
     }
 
     handleLike = () => {
-        fetch('http://localhost:3000/gifs', {
+        fetch('https://fast-sea-48558.herokuapp.com/gifs', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -47,7 +47,7 @@ export default class Canvas extends React.Component{
           }
       )
     }).then(r => r.json()).then(data => {
-        fetch('http://localhost:3000/likes', {
+        fetch('https://fast-sea-48558.herokuapp.com/likes', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
@@ -74,7 +74,8 @@ export default class Canvas extends React.Component{
         const image = `${this.props.currentGif}`
         return(
         <div id="phaserContainer">
-            
+            <h1> Click for the next GIF! </h1>
+            <p>Hit 'like' to save the GIF to your PROFILE, and FEED to see what everybody is liking!</p>
             <canvas onClick={this.props.handleClick}
             ref="canvas"
             width='900'
@@ -94,7 +95,6 @@ export default class Canvas extends React.Component{
             <button className="btn success" style={{width: 900}}>Go To Feed</button>
             <Route path={'/feed'} render={routerProps => <Feed {...routerProps} currentUser={this.state.currentUser}/>}/>
             </Link>
-            <button className="btn warning" onClick={this.gameClick}> Play Game</button>
             {/* {, backgroundSize: 'cover'} */}
             {this.state.clicked? <Game url={this.props.currentGif}/>:null}
         </div>

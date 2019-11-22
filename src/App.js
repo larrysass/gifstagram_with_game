@@ -23,7 +23,7 @@ class App extends React.Component {
 
   componentDidMount(){
     if (localStorage.token) {
-      fetch('http://localhost:3000/profile',{
+      fetch('https://fast-sea-48558.herokuapp.com/profile',{
         headers: {
           'Authorization': `Bearer ${localStorage.token}`
         }

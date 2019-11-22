@@ -27,7 +27,7 @@ export default class Feed extends React.Component {
             this.setState({
                 currentUser: this.props.currentUser
             })}
-        fetch('http://localhost:3000/gifs')
+        fetch('https://fast-sea-48558.herokuapp.com/gifs')
         .then(r => r.json())
         .then(gifs => {const filteredGifs = gifs.filter(gif => gif.likes.length > 0).reverse()
             this.setState({
@@ -60,6 +60,7 @@ export default class Feed extends React.Component {
             <button onClick={this.backToCanvas} className="btn error">Back to Canvas</button>
             <button onClick={this.mostLiked} className="btn primary">Most Popular</button>
             <button onClick={this.newestGifs} className="btn success">Newest</button>
+            <h1>Click on a GIF to like or leave a comment!</h1>
             {gifs}
           </div>
         );

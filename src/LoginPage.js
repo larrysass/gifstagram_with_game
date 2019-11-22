@@ -12,7 +12,7 @@ class LoginPage extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    fetch('http://localhost:3000/login', {
+    fetch('https://fast-sea-48558.herokuapp.com/login', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -47,7 +47,10 @@ class LoginPage extends Component {
           <input onChange={this.handleChange} value={this.state.password} placeholder="password"type="password" name="password" className="input"/>
           <input type="submit" style={{width: 900}} className="btn success" value="Log in"/>
         </form>
+       
+
           <button onClick={this.handleClick} style={{width: 900}} className="btn error">Sign Up</button>
+          <p> (If you don't want to sign up, just use "test" as username and password)</p>
       </div>
     );
   }
